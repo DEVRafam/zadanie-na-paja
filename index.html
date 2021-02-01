@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Paj zadanie</title>
+        <link rel="stylesheet" href="./public.css" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <button class="interfaceToggler" id="open-interface">Stworz wiadomosc</button>
+        <!--  -->
+        <section id="interface">
+            <button id="close" class="interfaceToggler">Zamknij</button>
+            <form id="interface-form">
+                <!--  -->
+                <h6>Tekst</h6>
+                <div class="level col">
+                    <div class="level">
+                        <label for="temp-fn">Wybierz funkcje temperatury</label>
+                        <select id="temp-fn">
+                            <option value="celToFar">celToFar</option>
+                            <option value="farToCel">farToCel</option>
+                            <option value="celToKel">celToKel</option>
+                            <option value="kelToCel">kelToCel</option>
+                        </select>
+                        <label for="temp-val">oraz argument</label>
+                        <input type="number" id="temp-val" value="50" />
+                    </div>
+                    <div class="level col">
+                        <div class="level">
+                            <label for="text" style="margin: 10px 0">lub wpisz po prostu tekst</label>
+                            <button style="padding: 5px 20px" id="generate-lorem">Wygeneruj lorem ipsum</button>
+                            <button style="padding: 5px 20px" id="clear-tekst">Wyczyść</button>
+                        </div>
+                        <textarea id="text" cols="30" rows="10" placeholder="Jeżeli tekst będzie pusty lub miał długość mniejsza niz 10 znakow, jako kontent wiadomosci zostanie zaladowana wybrana funkcja temperatury..."></textarea>
+                    </div>
+                </div>
+                <!--  -->
+                <h6>Rozmiar i pozycja</h6>
+                <div class="level sizes">
+                    <input type="text" id="pos-x" placeholder="pozycja x" value="50%" />
+                    <input type="text" id="pos-y" placeholder="pozycja y" value="50%" />
+                    <input type="text" id="width" placeholder="szerokosc" value="550px" />
+                    <input type="text" id="height" placeholder="wysokosc" value="350px" />
+                </div>
+                <!--  -->
+                <div class="level icon">
+                    <div class="box">
+                        <h6>Ikonka</h6>
+                        <i class="fa fa-music" id="icon-preview"></i>
+                        <!--  -->
+                        <select id="select-icon">
+                            <option value="fa-music">muzyka</option>
+                            <option value="fa-check">okej</option>
+                            <option value="fa-times">nie okej</option>
+                            <option value="fa-camera">aparat</option>
+                            <option value="fa-shopping-cart">zakupy</option>
+                            <option value="fa-heart-o">szkola gorzen</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <h6>Typ wiadomości</h6>
+                        <div id="type-preview" class="basic"></div>
+                        <select id="select-msg-type">
+                            <option value="basic">zwykly</option>
+                            <option value="ok">okej</option>
+                            <option value="inf">ostrzezenie</option>
+                            <option value="err">blad</option>
+                        </select>
+                    </div>
+                </div>
+                <!--  -->
+                <button id="create-message">Stworz</button>
+            </form>
+        </section>
+        <!--  -->
+        <!--  -->
+        <!--  -->
+        <script src="./js/main.js" type="module"></script>
+        <script src="./js/interfejs/index.js" type="module"></script>
+    </body>
+</html>

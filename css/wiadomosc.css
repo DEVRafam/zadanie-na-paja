@@ -1,0 +1,87 @@
+div#message {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    cursor: default;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1;
+}
+div#message p,
+div#message h2 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+div#message p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    position: relative;
+}
+div#message p::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%) skew(45deg);
+    background-color: #000;
+    height: 3px;
+}
+div#message h2 {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+}
+div#message i {
+    font-size: 10rem;
+}
+/* TYPES */
+div#message.err {
+    border: 5px solid #d63031;
+}
+div#message.err i,
+div#message.err h2 {
+    color: #d63031;
+}
+div#message.err p::after {
+    background-color: #d63031;
+}
+/*  */
+div#message.ok {
+    border: 5px solid #27ae60;
+}
+div#message.ok i,
+div#message.ok h2 {
+    color: #27ae60;
+}
+div#message.ok p::after {
+    background-color: #27ae60;
+}
+/*  */
+div#message.inf {
+    border: 5px solid #f39c12;
+}
+div#message.inf i,
+div#message.inf h2 {
+    color: #f39c12;
+}
+div#message.inf p::after {
+    background-color: #f39c12;
+}
+/*  */
+div#message.basic {
+    border: 5px solid #a29bfe;
+}
+div#message.basic i,
+div#message.basic h2 {
+    color: #a29bfe;
+}
+div#message.basic p::after {
+    background-color: #a29bfe;
+}
