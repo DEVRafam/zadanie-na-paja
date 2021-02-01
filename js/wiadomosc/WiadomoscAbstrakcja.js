@@ -1,5 +1,4 @@
 const MESSAGE_ELEMENT_ID = "message";
-import { getById } from "../interfejs/helpers.js";
 //
 export default class {
     constructor(type, x, y, width, height, text, icon) {
@@ -44,7 +43,7 @@ export default class {
     //
     deleteCurrentMessage() {
         try {
-            getById(MESSAGE_ELEMENT_ID).remove();
+            document.getElementById(MESSAGE_ELEMENT_ID).remove();
         } catch (e) {}
     }
 }
